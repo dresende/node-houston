@@ -1,0 +1,25 @@
+{
+	"name"        : "houston",
+	"version"     : "0.0.1",
+	"description" : "NodeJS logging framework",
+	"keywords"    : [
+		"log"
+	],
+	"author"      : "Diogo Resende <dresende@thinkdigital.pt>",
+	"engines"    : {
+		"node"   : ">= 0.4.0"
+	},
+	"repository" : {
+		"type"   : "git",
+		"url"    : "http://github.com/dresende/node-houston.git"
+	},
+	"directories": {
+		"lib"    : "./lib",
+		"example": "./examples"
+	},
+	"main"       : "./lib/houston",
+	"licenses"   : [{
+		"type"   : "MIT",
+		"url"    : "http://github.com/dresende/node-houston/raw/master/LICENSE"
+	}]
+}
