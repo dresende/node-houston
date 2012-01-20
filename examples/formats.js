@@ -3,7 +3,7 @@ var houston = require("../lib/houston"),
 
 log.warn("We have a problem!");
 
-houston.setDateFormat("yyyy-mm-dd HH:MM:ss")
-       .setLogFormat("[ %date ] %uid.%type -- %text");
+houston.dateFormat("yyyy-mm-dd HH:MM:ss")
+       .logFormat("[ %date ] %uid.%type -- %text");
 
 log.info("We have a problem!");
