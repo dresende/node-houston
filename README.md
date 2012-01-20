@@ -1,4 +1,4 @@
-Houston
+Houston ![ Travis CI ](https://secure.travis-ci.org/dresende/node-houston.png)
 =======
 
 ## About
