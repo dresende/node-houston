@@ -22,6 +22,9 @@
 		"type"   : "MIT",
 		"url"    : "http://github.com/dresende/node-houston/raw/master/LICENSE"
 	}],
+	"devDependencies": {
+		"vows": "0.6.x"
+	},
 	"scripts": {
 		"test": "vows --spec tests/*"
 	}
