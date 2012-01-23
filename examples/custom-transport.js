@@ -1,7 +1,7 @@
 var houston = require("../lib/houston"),
     log = houston("simple");
 
-houston.clearTransports().addTransport({
+houston.transports.clear().add({
 	// if this is not set, only a text string is sent to transport
 	original: true,
 	out: function (l) {

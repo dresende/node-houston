@@ -1,7 +1,7 @@
 var houston = require("../lib/houston"),
     log = houston("simple");
 
-houston.addTransport(new houston.file({
+houston.transports.add(new houston.transports.file({
 	errors: "my-errors.log"
 }));
 
