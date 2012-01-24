@@ -12,6 +12,10 @@ simplelog.info("This will go to simple log");
 otherlog.info("This will go to other log");
 anotherlog.info("This will go to another log");
 
-std.filter(); // clear filters
+std.filter(false); // clear filters
 
 otherlog.warn("Check source code to know what is missing..");
+
+std.filter(true); // filter all
+
+otherlog.error("This will never show up..");
