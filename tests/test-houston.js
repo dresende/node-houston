@@ -1,6 +1,7 @@
 var vows = require("vows"),
     assert = require("assert"),
-    houston = require("../lib/houston");
+    houston = require("../lib/houston"),
+    Transport = require("../lib/transport").Transport;
 
 vows.describe("houston").addBatch({
 	"houston": {
@@ -12,6 +13,7 @@ vows.describe("houston").addBatch({
 			assert.isFunction(topic.useColors);
 			assert.isFunction(topic.dateFormat);
 			assert.isFunction(topic.logFormat);
+			assert.isFunction(topic.debugLogFormat);
 			assert.isFunction(topic.colorLogFormat);
 			assert.isFunction(topic.transports);
 			assert.isFunction(topic.transports.add);
@@ -30,7 +32,12 @@ vows.describe("houston").addBatch({
 		topic: function () {
 			return new houston.transports.std();
 		},
+		"should be an instance of Transport": function (topic) {
+			assert.instanceOf(topic, Transport);
+		},
 		"should have correct methods defined": function (topic) {
+			assert.isFunction(topic.write);
+			assert.isFunction(topic.filter);
 			assert.isFunction(topic.out);
 			assert.isFunction(topic.err);
 		},
@@ -58,6 +65,22 @@ vows.describe("houston").addBatch({
 		},
 		"should really clear the current transports": function (topic) {
 			assert.isEmpty(topic);
+		}
+	}
+}).addBatch({
+	"a log": {
+		topic: function () {
+			return houston("log");
+		},
+		"should have correct methods defined": function (topic) {
+			assert.isFunction(topic.info);
+			assert.isFunction(topic.warn);
+			assert.isFunction(topic.error);
+			assert.isFunction(topic.profile);
+			assert.isFunction(topic.silence);
+			assert.isFunction(topic.debug);
+			assert.isFunction(topic.trace);
+			assert.isFunction(topic.exitOnError);
 		}
 	}
 }).export(module);
