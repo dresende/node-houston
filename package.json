@@ -2,9 +2,7 @@
 	"name"        : "houston",
 	"version"     : "0.0.4-3",
 	"description" : "NodeJS logging framework",
-	"keywords"    : [
-		"log"
-	],
+	"keywords"    : [ "log", "logging" ],
 	"author"      : "Diogo Resende <dresende@thinkdigital.pt>",
 	"engines"    : {
 		"node"   : ">= 0.4.0"
