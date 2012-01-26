@@ -9,7 +9,9 @@ setInterval(function () {
 	log.info("[" + (n++) + "] log message");
 }, 500);
 
+
 // every 5 seconds, rotate log
-setInterval(function () {
-	houston.rotate();
-}, 5000);
+houston.scheduleRotate(5);
+// setInterval(function () {
+// 	houston.rotate();
+// }, 5000);
